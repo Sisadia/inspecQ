@@ -29,7 +29,7 @@ We specialize in:
 ## 👋 Connect With Us
 
 - 🌐 Website: [https://inspecq.com](https://inspecq.com)  
-- 📧 Email: inspecq@gmail.com  
+- 📧 Email: helloinspecq@gmail.com  
 - 🔗 LinkedIn: [InspecQ LinkedIn Page](https://linkedin.com/company/inspecq)
 
 ---
