@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Play, CheckCircle, Calendar, Clock, Users, ArrowRight, Monitor, Smartphone, Globe } from 'lucide-react';
+import { useFormSubmission } from '../hooks/useFormSubmission';
 
 const Demo = () => {
+  const { submitForm, isSubmitting } = useFormSubmission();
   const [selectedDemo, setSelectedDemo] = useState('platform');
   const [formData, setFormData] = useState({
     name: '',
@@ -20,11 +22,22 @@ const Demo = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Demo scheduled:', formData);
-    alert('Demo scheduled successfully! You\'ll receive a calendar invite shortly.');
-    setFormData({ name: '', email: '', company: '', role: '', preferredTime: '', interests: [] });
+    
+    const demoData = {
+      ...formData,
+      demoType: demoTypes.find(d => d.id === selectedDemo)?.title
+    };
+    
+    const result = await submitForm(demoData, 'Demo Request', 'Demo Page');
+    
+    if (result.success) {
+      alert('Demo scheduled successfully! You\'ll receive a calendar invite shortly.');
+      setFormData({ name: '', email: '', company: '', role: '', preferredTime: '', interests: [] });
+    } else {
+      alert('There was an error scheduling your demo. Please try again.');
+    }
   };
 
   const demoTypes = [
@@ -329,10 +342,11 @@ const Demo = () => {
 
             <button
               type="submit"
-              className="w-full bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2"
+              disabled={isSubmitting}
+              className="w-full bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
             >
               <Calendar className="h-5 w-5" />
-              <span>Schedule Demo</span>
+              <span>{isSubmitting ? 'Scheduling...' : 'Schedule Demo'}</span>
             </button>
             
             <p className="text-sm text-gray-500 text-center">

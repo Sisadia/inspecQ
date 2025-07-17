@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from 'lucide-react';
+import { useFormSubmission } from '../hooks/useFormSubmission';
 
 const Contact = () => {
+  const { submitForm, isSubmitting } = useFormSubmission();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,10 +12,17 @@ const Contact = () => {
     service: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+    
+    const result = await submitForm(formData, 'Contact Form', 'Contact Page');
+    
+    if (result.success) {
+      alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+      setFormData({ name: '', email: '', company: '', message: '', service: '' });
+    } else {
+      alert('There was an error submitting your form. Please try again.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -192,10 +201,11 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center space-x-2 disabled:opacity-50"
               >
                 <Send className="w-5 h-5" />
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
             </form>
 

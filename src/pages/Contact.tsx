@@ -11,6 +11,8 @@ const Contact = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -18,12 +20,18 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
     console.log('Form submitted:', formData);
-    alert('Thank you for your interest! We\'ll get back to you within 24 hours.');
+    alert("Thank you for your interest! We'll get back to you within 24 hours.");
     setFormData({ name: '', email: '', company: '', service: '', message: '' });
-  };
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const contactInfo = [
     { icon: Mail, title: 'Email', value: 'hello@inspecq.com', link: 'mailto:hello@inspecq.com' },
@@ -108,9 +116,10 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/free-trial"
-                className="bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2"
+                onClick={(e)=>isSubmitting && e.preventDefault()}
+                className="w-full bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
               >
-                <span>Start Free Trial</span>
+                <span>{isSubmitting ? 'Submitting...' : 'Start Free Trial'}</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link

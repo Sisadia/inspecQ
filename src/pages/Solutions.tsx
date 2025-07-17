@@ -100,12 +100,12 @@ const Solutions = () => {
                 <span>Get Custom Solution</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link
+              {/* <Link
                 to="/case-studies"
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md font-semibold text-lg hover:bg-gray-50 transition-colors duration-200"
               >
                 View Success Stories
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

@@ -21,6 +21,14 @@ import Blog from './pages/Blog';
 import Resources from './pages/Resources';
 import Pricing from './pages/Pricing';
 
+// Admin imports
+import AdminLogin from './pages/admin/Login';
+import AdminDashboard from './pages/admin/Dashboard';
+import AdminCareers from './pages/admin/Careers';
+import AdminNewsletter from './pages/admin/Newsletter';
+import AdminForms from './pages/admin/Forms';
+import ProtectedRoute from './components/admin/ProtectedRoute';
+
 function App() {
   return (
     <Router>
@@ -45,6 +53,29 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/pricing" element={<Pricing />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } />
+          <Route path="/admin/careers" element={
+            <ProtectedRoute>
+              <AdminCareers />
+            </ProtectedRoute>
+          } />
+          <Route path="/admin/newsletter" element={
+            <ProtectedRoute>
+              <AdminNewsletter />
+            </ProtectedRoute>
+          } />
+          <Route path="/admin/forms" element={
+            <ProtectedRoute>
+              <AdminForms />
+            </ProtectedRoute>
+          } />
         </Routes>
         <Footer />
       </div>

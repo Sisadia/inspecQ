@@ -5,7 +5,7 @@ import { Award, Users, Clock, Target, CheckCircle, Linkedin, Twitter, ArrowRight
 const About = () => {
   const teamMembers = [
     {
-      name: 'Sarah Chen',
+      name: 'Sadia Islam',
       role: 'Chief Technology Officer',
       experience: '12+ years',
       specialties: ['Test Strategy', 'Quality Leadership', 'DevOps'],
@@ -15,7 +15,7 @@ const About = () => {
       twitter: '#'
     },
     {
-      name: 'Michael Rodriguez',
+      name: 'Rifat Ara Nawshin',
       role: 'Head of Automation',
       experience: '10+ years',
       specialties: ['Test Automation', 'Framework Design', 'CI/CD'],
@@ -25,7 +25,7 @@ const About = () => {
       twitter: '#'
     },
     {
-      name: 'Emily Johnson',
+      name: 'Humayra Himi',
       role: 'Security Testing Lead',
       experience: '8+ years',
       specialties: ['Security Testing', 'Penetration Testing', 'Compliance'],
@@ -34,21 +34,11 @@ const About = () => {
       linkedin: '#',
       twitter: '#'
     },
-    {
-      name: 'David Park',
-      role: 'Performance Testing Specialist',
-      experience: '9+ years',
-      specialties: ['Load Testing', 'Performance Optimization', 'Monitoring'],
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
-      certifications: ['LoadRunner Expert', 'JMeter Certified'],
-      linkedin: '#',
-      twitter: '#'
-    }
   ];
 
   const stats = [
-    { icon: Users, value: '50+', label: 'Testing Experts', color: 'bg-emerald-500' },
-    { icon: Award, value: '15+', label: 'Years Experience', color: 'bg-blue-500' },
+    { icon: Users, value: '20+', label: 'Testing Experts', color: 'bg-emerald-500' },
+    { icon: Award, value: '10+', label: 'Years Experience', color: 'bg-blue-500' },
     { icon: Clock, value: '24/7', label: 'Global Support', color: 'bg-purple-500' },
     { icon: Target, value: '99%', label: 'Client Satisfaction', color: 'bg-orange-500' }
   ];
@@ -121,7 +111,7 @@ const About = () => {
               Founded by experienced QA professionals from leading tech companies, we're launching 
               InspecQ to bring enterprise-level testing expertise to startups and growing businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/careers"
                 className="bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2"
@@ -135,7 +125,7 @@ const About = () => {
               >
                 Get in Touch
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -181,7 +171,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* Timeline Section *\}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

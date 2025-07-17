@@ -11,6 +11,8 @@ const FreeTrial = () => {
     useCase: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -354,9 +356,10 @@ const FreeTrial = () => {
 
               <button
                 type="submit"
-                className="w-full bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                className="w-full bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
               >
-                <span>Start My Free Trial</span>
+                <span>{isSubmitting ? 'Starting Trial...' : 'Start My Free Trial'}</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
               
