@@ -2,25 +2,36 @@ import React from 'react';
 import { ArrowRight, CheckCircle, Calendar, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+declare global {
+  interface Window {
+    Calendly: {
+      initPopupWidget: (options: { url: string }) => void;
+      closePopupWidget?: () => void;
+    };
+  }
+}
+
+
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-white to-teal-50 pt-16">
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <CheckCircle className="h-4 w-4 mr-2" />
-              QA Agency - Expert Team
+              QA Agency with Expert Team
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Built to Inspect.
               <span className="text-emerald-600 block">Powered by Quality.</span>
             </h1>
-          
+
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Launch your software with confidence. Our expert QA team brings years of industry experience 
+              Launch your software with confidence. Our expert QA team brings years of industry experience
               to deliver comprehensive testing solutions for startups and growing companies.
             </p>
 
@@ -32,14 +43,21 @@ const Hero = () => {
                 <Wrench className="h-5 w-5" />
                 <span>Explore Our Services</span>
               </Link>
-            
-              <Link
-                to="/contact"
+
+              <button
+                onClick={() => {
+                  console.log('Trying popup...');
+                  window.Calendly?.initPopupWidget({
+                    url: 'https://calendly.com/your-link',
+                  });
+                }}
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md font-semibold text-lg hover:bg-gray-50 transition-all duration-200 flex items-center justify-center space-x-2"
               >
                 <Calendar className="h-5 w-5" />
                 <span>Book Free QA Session</span>
-              </Link>
+              </button>
+
+
             </div>
 
             <div className="grid grid-cols-3 gap-8">
@@ -55,7 +73,7 @@ const Hero = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="relative">
             <div className="bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl p-8 shadow-2xl">
               <div className="bg-white rounded-xl p-6 mb-6">

@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from 'lucide-react';
 import { useFormSubmission } from '../hooks/useFormSubmission';
 
+declare global {
+  interface Window {
+    Calendly: {
+      initPopupWidget: (options: { url: string }) => void;
+      closePopupWidget?: () => void;
+    };
+  }
+}
+
 const Contact = () => {
   const { submitForm, isSubmitting } = useFormSubmission();
   const [formData, setFormData] = useState({
@@ -14,15 +23,20 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
+  try {
     const result = await submitForm(formData, 'Contact Form', 'Contact Page');
-    
-    if (result.success) {
-      alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+
+    if (result?.success) {
+      alert("Thank you for your message! We'll get back to you within 24 hours.");
       setFormData({ name: '', email: '', company: '', message: '', service: '' });
     } else {
       alert('There was an error submitting your form. Please try again.');
     }
+  } catch (error) {
+    alert('Something went wrong. Please try again later.');
+    console.error(error);
+  }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -31,6 +45,8 @@ const Contact = () => {
       [e.target.name]: e.target.value
     });
   };
+
+  
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-teal-50 via-white to-blue-50">
@@ -59,7 +75,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900">Email Us</h4>
-                  <p className="text-gray-600">hello@inspecq.com</p>
+                  <p className="text-gray-600">helloinspecq@gmail.com</p>
                   <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                 </div>
               </div>
@@ -103,8 +119,13 @@ const Contact = () => {
               <p className="text-emerald-700 mb-4">
                 Book a 30-minute consultation to discuss your testing needs and get expert recommendations.
               </p>
-              <button className="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
-                Schedule Consultation
+              <button className="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
+                  onClick ={() => 
+                    window.Calendly.initPopupWidget({ 
+                      url: 'https://calendly.com/helloinspecq/30min' 
+                      })}
+                    >
+                    Schedule Consultation
               </button>
             </div>
           </div>

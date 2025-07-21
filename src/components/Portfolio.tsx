@@ -28,7 +28,7 @@ const Portfolio = () => {
 
   const teamStats = [
     { icon: TrendingUp, value: '10+', label: 'Years Combined Experience', color: 'text-emerald-600' },
-    { icon: Users, value: '5', label: 'Expert QA Engineers', color: 'text-blue-600' },
+    { icon: Users, value: '10', label: 'Expert QA Engineers', color: 'text-blue-600' },
     { icon: Zap, value: '50+', label: 'Technologies Mastered', color: 'text-purple-600' },
     { icon: Star, value: '100%', label: 'Quality Commitment', color: 'text-orange-600' }
   ];

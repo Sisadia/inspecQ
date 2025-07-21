@@ -90,11 +90,11 @@ const Services = () => {
                 ))}
               </ul>
               
-              <div className="mt-6 pt-6 border-t border-gray-200">
+              {/* <div className="mt-6 pt-6 border-t border-gray-200">
                 <button className="text-emerald-600 font-medium hover:text-emerald-700 transition-colors duration-200">
                   Learn More →
                 </button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

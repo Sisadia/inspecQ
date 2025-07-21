@@ -8,12 +8,12 @@ const ToolsStack = () => {
       icon: Zap,
       color: 'bg-emerald-500',
       tools: [
-        { name: 'Selenium WebDriver', logo: '🔧', description: 'Web automation framework' },
-        { name: 'Cypress', logo: '🌲', description: 'Modern end-to-end testing' },
-        { name: 'Playwright', logo: '🎭', description: 'Cross-browser automation' },
-        { name: 'Appium', logo: '📱', description: 'Mobile app automation' },
-        { name: 'TestNG', logo: '⚡', description: 'Testing framework for Java' },
-        { name: 'Jest', logo: '🃏', description: 'JavaScript testing framework' }
+        { name: 'Selenium WebDriver', logo: '/icons/selenium.png', description: 'Web automation framework' },
+        { name: 'Cypress', logo: '/icons/cypress.png', description: 'Modern end-to-end testing' },
+        { name: 'Playwright', logo: '/icons/playwrite.png', description: 'Cross-browser automation' },
+        { name: 'Appium', logo: '/icons/appium.png', description: 'Mobile app automation' },
+        { name: 'TestNG', logo: '/icons/testng.png', description: 'Testing framework for Java' },
+        { name: 'Jest', logo: '/icons/jest.png', description: 'JavaScript testing framework' }
       ]
     },
     {
@@ -21,11 +21,11 @@ const ToolsStack = () => {
       icon: Database,
       color: 'bg-purple-500',
       tools: [
-        { name: 'JMeter', logo: '⚡', description: 'Load testing tool' },
-        { name: 'LoadRunner', logo: '🏃', description: 'Enterprise performance testing' },
-        { name: 'K6', logo: '📊', description: 'Modern load testing' },
-        { name: 'Gatling', logo: '🔫', description: 'High-performance load testing' },
-        { name: 'Artillery', logo: '💥', description: 'Modern load testing toolkit' },
+        { name: 'JMeter', logo: '/icons/jmeter.png', description: 'Load testing tool' },
+        //{ name: 'LoadRunner', logo: '/icons/jmeter.png', description: 'Enterprise performance testing' },
+        { name: 'K6', logo: '/icons/k6.svg', description: 'Modern load testing' },
+        // { name: 'Gatling', logo: '🔫', description: 'High-performance load testing' },
+        // { name: 'Artillery', logo: '💥', description: 'Modern load testing toolkit' },
         { name: 'WebPageTest', logo: '🌐', description: 'Web performance testing' }
       ]
     },
@@ -114,7 +114,11 @@ const ToolsStack = () => {
                 {category.tools.map((tool, toolIndex) => (
                   <div key={toolIndex} className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-200">
                     <div className="flex items-center mb-2">
-                      <span className="text-lg mr-2">{tool.logo}</span>
+                      {tool.logo.includes('/icons/')?(
+                        <img src={tool.logo} alt={tool.name} className='w-8 h-8 mr-2 object-contain' />
+                      ) : (
+                          <span className="text-lg mr-2">{tool.logo}</span>
+                      )}
                       <span className="font-semibold text-gray-900 text-sm">{tool.name}</span>
                     </div>
                     <p className="text-xs text-gray-600">{tool.description}</p>

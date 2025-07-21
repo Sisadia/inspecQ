@@ -21,7 +21,7 @@ const AboutUs = () => {
   ];
 
   const stats = [
-    { icon: Users, value: '5', label: 'Expert QA Engineers', color: 'text-emerald-600' },
+    { icon: Users, value: '10+', label: 'Expert QA Engineers', color: 'text-emerald-600' },
     { icon: Award, value: '10+', label: 'Years Combined Experience', color: 'text-blue-600' },
     { icon: Clock, value: '24/7', label: 'Dedicated Support', color: 'text-purple-600' },
     { icon: Target, value: '100%', label: 'Quality Commitment', color: 'text-orange-600' }
@@ -61,12 +61,11 @@ const AboutUs = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
               InspecQ was born from a simple belief: every software product deserves exceptional quality assurance, 
-              regardless of company size or budget. Our founding team brings together decades of experience from 
-              industry leaders like Google, Microsoft, and Amazon.
+              regardless of company size or budget. Our founding team combines decades of expertise from top-tier quality engineering firms and high-growth startups, delivering excellence across diverse industries like finance, retail, and digital health.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
               We've seen firsthand how proper testing can make or break a product launch. That's why we're 
-              committed to bringing enterprise-level QA expertise to startups and growing companies who need 
+              committed to bringing enterprise-level QA expertise to the table and growing companies who need 
               it most.
             </p>
             <p className="text-gray-600 leading-relaxed">
@@ -80,7 +79,7 @@ const AboutUs = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
-                <span className="text-gray-700">Bridge the gap between enterprise QA and startup needs</span>
+                <span className="text-gray-700">Bridge the gap between enterprise QA and modern software team needs.</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
