@@ -42,35 +42,38 @@ const Demo = () => {
 
   const demoTypes = [
     {
-      id: 'platform',
-      title: 'Platform Overview',
-      duration: '30 minutes',
-      description: 'Complete walkthrough of our testing platform and core features',
-      features: ['Dashboard overview', 'Test management', 'Reporting & analytics', 'Integration capabilities'],
-      icon: Monitor
+    id: 'platform',
+    title: 'Functional Testing Overview',
+    duration: '30 minutes',
+    description: 'A comprehensive tour of our functional testing process and capabilities',
+    features: ['Step-by-Step Testing Strategy',
+    'Test execution workflow',
+    'Insights on improving test coverage',
+    'Expert tips tailored to your product'],
+    icon: Monitor
     },
     {
       id: 'automation',
-      title: 'Test Automation Demo',
-      duration: '45 minutes',
+      title: 'Test Automation Overview',
+      duration: '30 minutes',
       description: 'Deep dive into our automation capabilities and framework',
       features: ['Automation setup', 'Script creation', 'CI/CD integration', 'Maintenance tools'],
       icon: Play
     },
     {
       id: 'mobile',
-      title: 'Mobile Testing Demo',
+      title: 'Mobile Testing Overview',
       duration: '30 minutes',
       description: 'Specialized demo focusing on mobile testing solutions',
-      features: ['Device cloud', 'Cross-platform testing', 'Performance testing', 'App store validation'],
+      features: ['Device cloud', 'Cross-platform testing', 'Performance testing', 'Expert guidance for mobile app QA best practices'],
       icon: Smartphone
     },
     {
       id: 'enterprise',
       title: 'Enterprise Solution',
-      duration: '60 minutes',
+      duration: '30 minutes',
       description: 'Comprehensive demo for enterprise-level requirements',
-      features: ['Scalability features', 'Security & compliance', 'Custom integrations', 'Support options'],
+      features: ['Scalability features', 'Security & compliance', 'Collaboration-friendly workflows', 'Support options'],
       icon: Globe
     }
   ];
@@ -85,11 +88,11 @@ const Demo = () => {
   ];
 
   const benefits = [
-    {
-      title: 'See It in Action',
-      description: 'Watch our platform solve real testing challenges live',
-      icon: Play
-    },
+    // {
+    //   title: 'See It in Action',
+    //   description: 'Watch our platform solve real testing challenges live',
+    //   icon: Play
+    // },
     {
       title: 'Ask Questions',
       description: 'Get answers from our testing experts in real-time',

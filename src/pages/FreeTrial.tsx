@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Users, Clock, Shield, Zap, Star, Play } from 'lucide-react';
+import { CheckCircle, ArrowRight, Users, Clock, Shield, Zap, Star, Play, HandCoins } from 'lucide-react';
 
 const FreeTrial = () => {
   const [formData, setFormData] = useState({
@@ -30,33 +30,33 @@ const FreeTrial = () => {
   const features = [
     {
       icon: CheckCircle,
-      title: 'Full Platform Access',
-      description: 'Complete access to all testing features and capabilities'
+      title: 'Expert-Led QA Guidance',
+      description: 'Hands-on support from our team to assess and improve your testing process'
     },
     {
       icon: Users,
-      title: 'Up to 5 Team Members',
-      description: 'Collaborate with your entire team during the trial'
+      title: 'Team Collaboration Support',
+      description: 'Involve up to 5 team members for feedback, alignment, and shared insights'
     },
     {
       icon: Clock,
-      title: '14-Day Trial Period',
-      description: 'Plenty of time to explore and evaluate our platform'
+      title: '7-Day Trial Period',
+      description: 'Plenty of time to understand how InspecQ can enhance your software quality'
     },
     {
-      icon: Shield,
-      title: 'No Credit Card Required',
-      description: 'Start immediately without any payment information'
+      icon: HandCoins,
+      title: 'No Cost Required',
+      description: 'Start your trial without any payment or commitment'
     },
     {
       icon: Zap,
-      title: 'Instant Setup',
-      description: 'Get started in minutes with our quick onboarding'
+      title: 'Quick Kickoff',
+      description: 'We will onboard you within minutes and tailor everything to your goals'
     },
     {
       icon: Star,
-      title: 'Premium Support',
-      description: 'Dedicated support team to help you succeed'
+      title: 'Dedicated QA Support',
+      description: 'Get personalized help from our testing experts throughout your trial'
     }
   ];
 
@@ -87,23 +87,23 @@ const FreeTrial = () => {
   const steps = [
     {
       step: '1',
-      title: 'Sign Up',
-      description: 'Create your account in under 2 minutes'
+      title: 'Get in Touch',
+      description: 'Fill out a short form to request your free 7-day trial'
     },
     {
       step: '2',
-      title: 'Setup',
-      description: 'Quick onboarding with our setup wizard'
+      title: 'Kickoff Call',
+      description: 'We’ll schedule a quick session to understand your testing needs'
     },
     {
       step: '3',
-      title: 'Explore',
-      description: 'Start testing with full platform access'
+      title: 'Hands-On Support',
+      description: 'Our experts will work with your team to apply tailored QA strategies'
     },
     {
       step: '4',
-      title: 'Succeed',
-      description: 'Get support and see immediate results'
+      title: 'See the Results',
+      description: 'Get bug reports, quality insights, and process recommendations'
     }
   ];
 
@@ -113,23 +113,23 @@ const FreeTrial = () => {
       price: '$49',
       period: '/month',
       description: 'Perfect for small teams getting started',
-      features: ['Up to 5 users', '1,000 test runs/month', 'Basic integrations', 'Email support'],
+      features: ['QA consultation (up to 2 hours/month)', '1 test plan review', 'Basic test case design', 'Email support'],
       popular: false
     },
     {
       name: 'Professional',
       price: '$149',
       period: '/month',
-      description: 'Ideal for growing teams and projects',
-      features: ['Up to 25 users', '10,000 test runs/month', 'Advanced integrations', 'Priority support', 'Custom reporting'],
-      popular: true
+      description: 'Built for fast-growing teams needing more hands-on QA involvement.',
+      features: ['QA consultation (up to 6 hours/month)', 'Test planning & execution', 'Manual test case creation', 'Bug reporting & tracking support', 'Priority email support'],
+      popular: false
     },
     {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'Tailored for large organizations',
-      features: ['Unlimited users', 'Unlimited test runs', 'Custom integrations', '24/7 support', 'Dedicated success manager'],
+      description: 'Tailored QA solutions for large teams and complex projects.',
+      features: ['Dedicated QA lead', 'End-to-end testing strategy', 'Ongoing test execution & reporting', '24/7 support', 'Slack/Zoom/Google Meet collaboration'],
       popular: false
     }
   ];
@@ -142,14 +142,13 @@ const FreeTrial = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <CheckCircle className="h-4 w-4 mr-2" />
-              14-Day Free Trial
+              7-Day Free Trial
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Start Your Free Trial Today
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Experience the full power of InspecQ with a 14-day free trial. 
-              No credit card required, no commitments - just results.
+              Begin your 7-day trial of InspecQ at no cost. No payment information required and no further obligation - just results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -159,13 +158,13 @@ const FreeTrial = () => {
                 <span>Start Free Trial</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
-              <Link
+              {/* <Link
                 to="/demo"
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md font-semibold text-lg hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Play className="h-5 w-5" />
                 <span>Watch Demo</span>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -234,7 +233,7 @@ const FreeTrial = () => {
               Start Your Free Trial
             </h2>
             <p className="text-xl text-gray-600">
-              Join thousands of teams already using InspecQ to deliver better software.
+              Be among the first to experience expert-led QA that accelerates software quality.
             </p>
           </div>
 
@@ -341,15 +340,15 @@ const FreeTrial = () => {
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-emerald-600 rounded-full mr-3"></div>
-                    Instant access to your trial account
+                    You’ll receive a welcome email with next steps
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-emerald-600 rounded-full mr-3"></div>
-                    Welcome email with setup instructions
+                    We’ll schedule a quick discovery call to understand your QA needs
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-emerald-600 rounded-full mr-3"></div>
-                    Optional onboarding call with our team
+                    Our team will start preparing a tailored testing plan for your product
                   </li>
                 </ul>
               </div>
@@ -364,14 +363,14 @@ const FreeTrial = () => {
               </button>
               
               <p className="text-sm text-gray-500 text-center">
-                No credit card required • 14-day free trial • Cancel anytime
+                No credit card required • 7-day free trial • Cancel anytime
               </p>
             </form>
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
+{/* 
+      Testimonials
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -401,7 +400,7 @@ const FreeTrial = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Pricing Preview */}
       <section className="py-20 bg-white">
@@ -411,7 +410,7 @@ const FreeTrial = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your team size and needs. All plans include a 14-day free trial.
+              Choose the plan that fits your team size and needs. All plans include a 7-day free trial.
             </p>
           </div>
 

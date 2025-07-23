@@ -106,12 +106,12 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            {/* <Link
               to="/demo"
               className="text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors duration-200"
             >
-              Watch Demo
-            </Link>
+              Let’s Demo
+            </Link> */}
             <Link
               to="/free-trial"
               className="bg-emerald-600 text-white px-6 py-2 rounded-md font-medium hover:bg-emerald-700 transition-colors duration-200"

@@ -6,7 +6,7 @@ const Pricing = () => {
   const plans = [
     {
       name: 'Starter',
-      price: '$2,500',
+      price: '$49',
       period: '/month',
       description: 'Perfect for small teams and startups',
       popular: false,
@@ -15,7 +15,7 @@ const Pricing = () => {
         { name: 'Basic Automation', included: true },
         { name: 'Test Planning & Strategy', included: true },
         { name: 'Bug Reporting & Tracking', included: true },
-        { name: 'Email Support', included: true },
+        { name: 'Email Support', included: false },
         { name: 'Monthly Reports', included: true },
         { name: 'Performance Testing', included: false },
         { name: 'Security Testing', included: false },

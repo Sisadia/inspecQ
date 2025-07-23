@@ -23,7 +23,7 @@ const Footer = () => {
 
   const resources = [
     { name: 'Help Center', path: '/help' },
-    { name: 'API Documentation', path: '/docs' },
+    //{ name: 'API Documentation', path: '/docs' },
     { name: 'Best Practices', path: '/best-practices' },
     { name: 'Webinars', path: '/webinars' },
     { name: 'Community', path: '/community' }
@@ -39,20 +39,17 @@ const Footer = () => {
               <span className="text-xl font-bold">InspecQ</span>
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Built to Inspect. Powered by Quality. We're a new QA agency bringing 
+              Built to Inspect. Powered by Quality. We're a QA agency bringing 
               industry expertise to deliver exceptional software testing services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
+              <a href="https://www.linkedin.com/company/inspecq" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
-                <Twitter className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
+              <a href="https://www.facebook.com/inspecq" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
@@ -112,7 +109,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2 text-gray-400">
                 <Mail className="h-4 w-4" />
-                <span>hello@inspecq.com</span>
+                <span>helloinspecq@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-400">
                 <Phone className="h-4 w-4" />
@@ -120,13 +117,12 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-gray-400">
                 <MapPin className="h-4 w-4" />
-                <span>San Francisco, CA</span>
+                <span>Remote Operations</span>
               </div>
             </div>
             
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-emerald-400 transition-colors duration-200">Privacy</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors duration-200">Terms</a>
+              <a href="#" className="hover:text-emerald-400 transition-colors duration-200">Terms & Privacy</a>
               <a href="#" className="hover:text-emerald-400 transition-colors duration-200">Security</a>
             </div>
           </div>

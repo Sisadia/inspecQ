@@ -34,10 +34,10 @@ const Contact = () => {
 };
 
   const contactInfo = [
-    { icon: Mail, title: 'Email', value: 'hello@inspecq.com', link: 'mailto:hello@inspecq.com' },
+    { icon: Mail, title: 'Email', value: 'helloinspecq@gmail.com', link: 'mailto:hello@inspecq.com' },
     { icon: Phone, title: 'Phone', value: '+1 (555) 123-4567', link: 'tel:+15551234567' },
-    { icon: MapPin, title: 'Address', value: '123 Innovation Drive\nSan Francisco, CA 94105', link: null },
-    { icon: Clock, title: 'Hours', value: 'Mon-Fri: 8AM-6PM PST\n24/7 Emergency Support', link: null }
+    { icon: MapPin, title: 'Address', value: 'Remote Operations', link: null },
+    { icon: Clock, title: 'Hours', value: 'Sat-Fri: 9AM-11:45PM (GMT)\nServing clients across time zones\n24/7 Emergency Support', link: null }
   ];
 
   const services = [
@@ -58,14 +58,14 @@ const Contact = () => {
       action: 'Start Chat',
       color: 'bg-emerald-500'
     },
-    {
-      icon: Calendar,
-      title: 'Schedule Demo',
-      description: 'See our platform in action',
-      action: 'Book Demo',
-      color: 'bg-blue-500',
-      link: '/demo'
-    },
+    // {
+    //   icon: Calendar,
+    //   title: 'Schedule Demo',
+    //   description: 'See our platform in action',
+    //   action: 'Book Demo',
+    //   color: 'bg-blue-500',
+    //   link: '/demo'
+    // },
     {
       icon: Phone,
       title: 'Call Us',
@@ -77,23 +77,23 @@ const Contact = () => {
 
   const offices = [
     {
-      city: 'San Francisco',
-      address: '123 Innovation Drive\nSan Francisco, CA 94105',
+      city: 'Remote Operations',
+      address: 'Supporting teams globally, around the clock',
       phone: '+1 (555) 123-4567',
-      email: 'sf@inspecq.com'
+      email: 'helloinspecq@gmail.com'
     },
-    {
-      city: 'New York',
-      address: '456 Tech Avenue\nNew York, NY 10001',
-      phone: '+1 (555) 234-5678',
-      email: 'ny@inspecq.com'
-    },
-    {
-      city: 'London',
-      address: '789 Quality Street\nLondon, UK EC1A 1BB',
-      phone: '+44 20 1234 5678',
-      email: 'london@inspecq.com'
-    }
+    // {
+    //   city: 'New York',
+    //   address: '456 Tech Avenue\nNew York, NY 10001',
+    //   phone: '+1 (555) 234-5678',
+    //   email: 'ny@inspecq.com'
+    // },
+    // {
+    //   city: 'London',
+    //   address: '789 Quality Street\nLondon, UK EC1A 1BB',
+    //   phone: '+44 20 1234 5678',
+    //   email: 'london@inspecq.com'
+    // }
   ];
 
   return (
@@ -117,17 +117,17 @@ const Contact = () => {
               <Link
                 to="/free-trial"
                 onClick={(e)=>isSubmitting && e.preventDefault()}
-                className="w-full bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
+                className="bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
               >
                 <span>{isSubmitting ? 'Submitting...' : 'Start Free Trial'}</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link
+              {/* <Link
                 to="/demo"
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md font-semibold text-lg hover:bg-gray-50 transition-colors duration-200"
               >
                 Schedule Demo
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -198,7 +198,7 @@ const Contact = () => {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 mr-3" />
-                    Proven track record
+                    Tailored testing strategies
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 mr-3" />
@@ -206,14 +206,14 @@ const Contact = () => {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 mr-3" />
-                    Cutting-edge technology
+                    Results you can measure
                   </li>
                 </ul>
               </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Start Your Free Trial</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">Got a Query? We’re Here to Help</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -287,7 +287,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Tell us about your project *
+                    Tell us about your query *
                   </label>
                   <textarea
                     id="message"
@@ -297,7 +297,7 @@ const Contact = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors duration-200"
-                    placeholder="Describe your testing needs, current challenges, and what you'd like to achieve..."
+                    placeholder="Let us know what you're curious about or need help with..."
                   />
                 </div>
 
@@ -306,11 +306,11 @@ const Contact = () => {
                   className="w-full bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2"
                 >
                   <Send className="h-5 w-5" />
-                  <span>Start Free Trial</span>
+                  <span>Send Your Query</span>
                 </button>
                 
                 <p className="text-sm text-gray-500 text-center">
-                  No credit card required. Get started in minutes.
+                  You can expect a timely response from us.
                 </p>
               </form>
             </div>
@@ -322,9 +322,9 @@ const Contact = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Global Offices</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Global Presence</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With offices around the world, we provide 24/7 support and local expertise wherever you are.
+              We're a remote-first team, delivering 24/7 QA support and expertise to clients worldwide.
             </p>
           </div>
 
