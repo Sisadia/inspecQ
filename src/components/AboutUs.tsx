@@ -2,23 +2,23 @@ import React from 'react';
 import { CheckCircle, Users, Award, Target, Clock } from 'lucide-react';
 
 const AboutUs = () => {
-  const values = [
-    {
-      icon: CheckCircle,
-      title: 'Quality First',
-      description: 'We never compromise on quality. Every test, every process, every deliverable meets our highest standards.'
-    },
-    {
-      icon: Target,
-      title: 'Innovation Driven',
-      description: 'We stay ahead of the curve with cutting-edge testing tools and methodologies to deliver superior results.'
-    },
-    {
-      icon: Users,
-      title: 'Client Success',
-      description: 'Your success is our success. We partner with you to achieve your quality goals and business objectives.'
-    }
-  ];
+  // const values = [
+  //   {
+  //     icon: CheckCircle,
+  //     title: 'Quality First',
+  //     description: 'We never compromise on quality. Every test, every process, every deliverable meets our highest standards.'
+  //   },
+  //   {
+  //     icon: Target,
+  //     title: 'Innovation Driven',
+  //     description: 'We stay ahead of the curve with cutting-edge testing tools and methodologies to deliver superior results.'
+  //   },
+  //   {
+  //     icon: Users,
+  //     title: 'Client Success',
+  //     description: 'Your success is our success. We partner with you to achieve your quality goals and business objectives.'
+  //   }
+  // ];
 
   const stats = [
     { icon: Users, value: '10+', label: 'Expert QA Engineers', color: 'text-emerald-600' },
@@ -57,7 +57,7 @@ const AboutUs = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
               InspecQ was born from a simple belief: every software product deserves exceptional quality assurance, 
@@ -72,32 +72,60 @@ const AboutUs = () => {
               As a new agency, we're excited to build lasting partnerships with forward-thinking companies 
               who value quality and want to launch with confidence.
             </p>
-          </div>
+          </div> */}
           
           <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8">
-            <h4 className="text-xl font-bold text-gray-900 mb-6">Why We Started InspecQ</h4>
+            <h4 className="text-xl font-bold text-gray-900 mb-6">Our Approach</h4>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
-                <span className="text-gray-700">Bridge the gap between enterprise QA and modern software team needs.</span>
+                <span className="text-gray-700">Discover → Understand your goals and challenges</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
-                <span className="text-gray-700">Make professional testing accessible to all company sizes</span>
+                <span className="text-gray-700">Strategize → Build a tailored QA roadmap</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
-                <span className="text-gray-700">Prevent costly bugs and failed launches through proper testing</span>
+                <span className="text-gray-700">Test → Execute functional, automation, and performance tests</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
-                <span className="text-gray-700">Build a quality-first culture in the software industry</span>
+                <span className="text-gray-700">Report → Clear insights with actionable fixes</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
+                <span className="text-gray-700">Support → Stay with you through release and beyond</span>
+              </li>
+            </ul>
+          </div>
+
+
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8">
+            <h4 className="text-xl font-bold text-gray-900 mb-6">Why Partner with a Startup QA Agency?</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
+                <span className="text-gray-700">Agile-Ready → We adapt to your sprint cycles.</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
+                <span className="text-gray-700">End-to-End Coverage → From login flows to API stress tests.</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
+                <span className="text-gray-700">Transparent Reporting → No fluff, only actionable insights.</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-emerald-600 mr-3 mt-1" />
+                <span className="text-gray-700">Flexible Engagement → On-demand, part-time, or full-time QA support.
+                </span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {values.map((value, index) => (
             <div key={index} className="text-center p-8 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300">
               <div className="bg-emerald-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -107,7 +135,7 @@ const AboutUs = () => {
               <p className="text-gray-600 leading-relaxed">{value.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

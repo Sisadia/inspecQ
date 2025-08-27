@@ -61,12 +61,12 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div>
+            {/* <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Connect</h3>
               <p className="text-gray-600 mb-8">
                 We're excited to learn about your project and discuss how we can help ensure your software meets the highest quality standards.
               </p>
-            </div>
+            </div> */}
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -91,7 +91,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              {/* <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <MessageSquare className="w-6 h-6 text-emerald-600" />
                 </div>
@@ -100,7 +100,7 @@ const Contact = () => {
                   <p className="text-gray-600">Available on our website</p>
                   <p className="text-sm text-gray-500">Instant responses during business hours</p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
@@ -230,11 +230,11 @@ const Contact = () => {
               </button>
             </form>
 
-            <div className="mt-6 text-center">
+            {/* <div className="mt-6 text-center">
               <p className="text-sm text-gray-500">
                 By submitting this form, you agree to our privacy policy and terms of service.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

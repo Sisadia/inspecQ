@@ -94,6 +94,15 @@ const Header = () => {
             >
               About
             </Link>
+
+            <Link
+              to="/pricing"
+              className={`text-sm font-medium transition-colors duration-200 ${
+                isActive('/pricing') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
+              }`}
+            >
+              Pricing
+            </Link>
             
             <Link
               to="/contact"

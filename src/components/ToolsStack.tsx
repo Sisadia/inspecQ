@@ -1,5 +1,4 @@
-import React from 'react';
-import { Code, Database, Globe, Smartphone, Shield, Zap, CheckCircle } from 'lucide-react';
+import { CheckCircle, Code, Database, Globe, Shield, Smartphone, Zap } from 'lucide-react';
 
 const ToolsStack = () => {
   const categories = [
@@ -84,44 +83,41 @@ const ToolsStack = () => {
   ];
 
   return (
-    <section id="tools-stack" className="py-20 bg-gradient-to-br from-purple-50 via-white to-emerald-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <CheckCircle className="h-4 w-4 mr-2" />
+    <section id='tools-stack' className='py-20 bg-gradient-to-br from-purple-50 via-white to-emerald-50'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='text-center mb-16'>
+          <div className='inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6'>
+            <CheckCircle className='h-4 w-4 mr-2' />
             Our Technology Stack
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Tools & Technologies We Master
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We use industry-leading tools and frameworks to deliver comprehensive 
-            testing solutions across all platforms and technologies.
+          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>Tools & Technologies We Master</h2>
+          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+            We choose the right stack for your needs. Whether you’re a startup or scaling enterprise, we adapt to your stack seamlessly.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {categories.map((category, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-6">
+            <div key={index} className='bg-white rounded-xl p-8 hover:shadow-lg transition-all duration-300'>
+              <div className='flex items-center mb-6'>
                 <div className={`${category.color} p-3 rounded-lg mr-4`}>
-                  <category.icon className="h-6 w-6 text-white" />
+                  <category.icon className='h-6 w-6 text-white' />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{category.title}</h3>
+                <h3 className='text-xl font-bold text-gray-900'>{category.title}</h3>
               </div>
-              
-              <div className="grid grid-cols-2 gap-4">
+
+              <div className='grid grid-cols-2 gap-4'>
                 {category.tools.map((tool, toolIndex) => (
-                  <div key={toolIndex} className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-200">
-                    <div className="flex items-center mb-2">
-                      {tool.logo.includes('/icons/')?(
+                  <div key={toolIndex} className='bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-200'>
+                    <div className='flex items-center mb-2'>
+                      {tool.logo.includes('/icons/') ? (
                         <img src={tool.logo} alt={tool.name} className='w-8 h-8 mr-2 object-contain' />
                       ) : (
-                          <span className="text-lg mr-2">{tool.logo}</span>
+                        <span className='text-lg mr-2'>{tool.logo}</span>
                       )}
-                      <span className="font-semibold text-gray-900 text-sm">{tool.name}</span>
+                      <span className='font-semibold text-gray-900 text-sm'>{tool.name}</span>
                     </div>
-                    <p className="text-xs text-gray-600">{tool.description}</p>
+                    <p className='text-xs text-gray-600'>{tool.description}</p>
                   </div>
                 ))}
               </div>
@@ -129,11 +125,9 @@ const ToolsStack = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-6">
-            Don't see your preferred tool? We're always expanding our toolkit to meet client needs.
-          </p>
-          <button className="bg-emerald-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-emerald-700 transition-colors duration-200">
+        <div className='text-center mt-12'>
+          <p className='text-gray-600 mb-6'>Don't see your preferred tool? We're always expanding our toolkit to meet client needs.</p>
+          <button className='bg-emerald-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-emerald-700 transition-colors duration-200'>
             Discuss Your Tech Stack
           </button>
         </div>

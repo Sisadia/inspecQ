@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,13 +51,13 @@ const Contact = () => {
   ];
 
   const contactMethods = [
-    {
-      icon: MessageSquare,
-      title: 'Live Chat',
-      description: 'Get instant answers to your questions',
-      action: 'Start Chat',
-      color: 'bg-emerald-500'
-    },
+    // {
+    //   icon: MessageSquare,
+    //   title: 'Live Chat',
+    //   description: 'Get instant answers to your questions',
+    //   action: 'Start Chat',
+    //   color: 'bg-emerald-500'
+    // },
     // {
     //   icon: Calendar,
     //   title: 'Schedule Demo',
@@ -71,6 +71,14 @@ const Contact = () => {
       title: 'Call Us',
       description: 'Speak with our experts directly',
       action: 'Call Now',
+      color: 'bg-purple-500'
+    },
+
+    {
+      icon: Mail,
+      title: 'Email Us',
+      description: 'We will get back within 24 hours',
+      action: ' Email Now',
       color: 'bg-purple-500'
     }
   ];
@@ -107,27 +115,27 @@ const Contact = () => {
               Built to Inspect. Powered by Quality.
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Let's Discuss Your Testing Needs
+              Ready for bug-free releases?
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Get in touch with our team to learn how we can help you achieve 
-              exceptional software quality and accelerate your development process.
+              Let’s design your QA strategy together. Book a free 30-min consultation or send us your query, we’ll get back within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/free-trial"
+                to="/free-trial" // Replace with calendly actual scheduling link 
                 onClick={(e)=>isSubmitting && e.preventDefault()}
                 className="bg-emerald-600 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
               >
-                <span>{isSubmitting ? 'Submitting...' : 'Start Free Trial'}</span>
+                <span>{isSubmitting ? 'Submitting...' : '📅  Book Free QA Session'}</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              {/* <Link
-                to="/demo"
+
+              <Link
+                to="/contact"
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md font-semibold text-lg hover:bg-gray-50 transition-colors duration-200"
               >
-                Schedule Demo
-              </Link> */}
+                📥  Send Your Query
+              </Link>
             </div>
           </div>
         </div>
@@ -136,6 +144,11 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Instant response during business hours, less than 2h response time otherwise. We are Available Mon–Fri, 9 AM–11 PM GMT.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {contactMethods.map((method, index) => (
               <div key={index} className="text-center p-8 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 group">
@@ -194,19 +207,15 @@ const Contact = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 mr-3" />
-                    Industry-leading expertise
+                    Cut release delays with tailored QA workflows.
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 mr-3" />
-                    Tailored testing strategies
+                    24/7 global support across time zones.
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 mr-3" />
-                    24/7 global support
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 mr-3" />
-                    Results you can measure
+                    Trusted by SaaS, e-commerce, and fintech teams.
                   </li>
                 </ul>
               </div>
@@ -310,7 +319,7 @@ const Contact = () => {
                 </button>
                 
                 <p className="text-sm text-gray-500 text-center">
-                  You can expect a timely response from us.
+                  We respect your time and inbox. No spam, only expert timely responses.
                 </p>
               </form>
             </div>
@@ -324,7 +333,7 @@ const Contact = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Global Presence</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're a remote-first team, delivering 24/7 QA support and expertise to clients worldwide.
+              We’ve supported clients in the US, Europe, and Asia — ensuring smooth QA across time zones.
             </p>
           </div>
 

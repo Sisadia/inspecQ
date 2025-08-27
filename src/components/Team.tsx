@@ -1,17 +1,16 @@
 import React from 'react';
-import { Award, Users, Clock, Target, CheckCircle, Linkedin, Twitter } from 'lucide-react';
+import { Award, Users, Clock, Target, CheckCircle, Linkedin} from 'lucide-react';
 
 const About = () => {
   const teamMembers = [
     {
-      name: 'Sarah Chen',
+      name: 'Sadia Islam',
       role: 'Chief Technology Officer',
-      experience: '12+ years',
+      experience: '5+ years',
       specialties: ['Test Strategy', 'Quality Leadership', 'DevOps'],
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
       certifications: ['ISTQB Expert', 'AWS Solutions Architect'],
-      linkedin: '#',
-      twitter: '#'
+      linkedin: '#'
     },
     {
       name: 'Michael Rodriguez',
@@ -20,8 +19,7 @@ const About = () => {
       specialties: ['Test Automation', 'Framework Design', 'CI/CD'],
       image: 'https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=400',
       certifications: ['Selenium Expert', 'Docker Certified'],
-      linkedin: '#',
-      twitter: '#'
+      linkedin: '#'
     },
     {
       name: 'Emily Johnson',
@@ -30,19 +28,8 @@ const About = () => {
       specialties: ['Security Testing', 'Penetration Testing', 'Compliance'],
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
       certifications: ['CISSP', 'CEH', 'OSCP'],
-      linkedin: '#',
-      twitter: '#'
+      linkedin: '#'
     },
-    {
-      name: 'David Park',
-      role: 'Performance Testing Specialist',
-      experience: '9+ years',
-      specialties: ['Load Testing', 'Performance Optimization', 'Monitoring'],
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
-      certifications: ['LoadRunner Expert', 'JMeter Certified'],
-      linkedin: '#',
-      twitter: '#'
-    }
   ];
 
   const stats = [
@@ -52,23 +39,23 @@ const About = () => {
     { icon: Target, value: '100%', label: 'Quality Commitment', color: 'bg-orange-500' }
   ];
 
-  const values = [
-    {
-      title: 'Excellence from Day One',
-      description: 'We bring industry best practices and proven methodologies to deliver exceptional quality from our very first project.',
-      icon: CheckCircle
-    },
-    {
-      title: 'Client Success Focus',
-      description: 'Your success is our success. We\'re committed to building long-term partnerships and delivering measurable results.',
-      icon: Target
-    },
-    {
-      title: 'Continuous Learning',
-      description: 'We stay current with the latest testing technologies and methodologies to provide cutting-edge solutions.',
-      icon: Users
-    }
-  ];
+  // const values = [
+  //   {
+  //     title: 'Excellence from Day One',
+  //     description: 'We bring industry best practices and proven methodologies to deliver exceptional quality from our very first project.',
+  //     icon: CheckCircle
+  //   },
+  //   {
+  //     title: 'Client Success Focus',
+  //     description: 'Your success is our success. We\'re committed to building long-term partnerships and delivering measurable results.',
+  //     icon: Target
+  //   },
+  //   {
+  //     title: 'Continuous Learning',
+  //     description: 'We stay current with the latest testing technologies and methodologies to provide cutting-edge solutions.',
+  //     icon: Users
+  //   }
+  // ];
 
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-emerald-50 via-white to-teal-50">
@@ -99,7 +86,7 @@ const About = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {values.map((value, index) => (
             <div key={index} className="text-center p-8 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300">
               <div className="bg-emerald-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -109,12 +96,12 @@ const About = () => {
               <p className="text-gray-600 leading-relaxed">{value.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Meet Our Leadership Team</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Meet the Team Behind InspecQ</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Industry veterans with decades of combined experience in quality assurance and software testing.
+            A team of passionate QA professionals with decades of combined experience across multiple industry.
           </p>
         </div>
 
@@ -153,14 +140,15 @@ const About = () => {
                     <a href={member.linkedin} className="text-gray-400 hover:text-emerald-600 transition-colors duration-200">
                       <Linkedin className="h-5 w-5" />
                     </a>
-                    <a href={member.twitter} className="text-gray-400 hover:text-emerald-600 transition-colors duration-200">
-                      <Twitter className="h-5 w-5" />
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className='text-center mt-12'>
+          <p className='text-gray-600 mb-6'>We’re lean, focused, and ready to be your external QA team.</p>
         </div>
       </div>
     </section>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, X, Star, ArrowRight, Users, Clock, Shield, Zap } from 'lucide-react';
+import { CheckCircle, X, Star, ArrowRight, Users, Clock, Shield} from 'lucide-react';
 
 const Pricing = () => {
   const plans = [
     {
-      name: 'Starter',
+      name: 'Pilot Project Package',
       price: '$49',
       period: '/month',
       description: 'Perfect for small teams and startups',
@@ -111,24 +111,24 @@ const Pricing = () => {
   const benefits = [
     {
       icon: Users,
-      title: 'Expert Team',
-      description: 'Senior QA professionals from top tech companies'
+      //title: 'Expert Team',
+      description: 'Launch with confidence — 40% fewer post-release bugs.'
     },
     {
       icon: Clock,
-      title: 'Fast Delivery',
-      description: 'Quick turnaround without compromising quality'
+      //title: 'Fast Delivery',
+      description: 'Accelerated sprints — faster delivery cycles.'
     },
     {
       icon: Shield,
-      title: 'Quality Guarantee',
-      description: '100% satisfaction guarantee on all projects'
+      //title: 'Quality Guarantee',
+      description: '100% transparency — detailed bug reports & test coverage insights.'
     },
-    {
-      icon: Zap,
-      title: 'Modern Tools',
-      description: 'Latest testing tools and methodologies'
-    }
+    // {
+    //   icon: Zap,
+    //   title: 'Modern Tools',
+    //   description: 'Latest testing tools and methodologies'
+    // }
   ];
 
   return (
@@ -142,11 +142,10 @@ const Pricing = () => {
               Built to Inspect. Powered by Quality.
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Quality Testing at Startup-Friendly Rates
+              Flexible Pricing Designed for Every Growth Stage.
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              As a new agency, we offer competitive pricing without compromising on quality. 
-              Choose the plan that fits your testing needs and budget.
+              Get the expertise of a senior QA team at rates that fit your stage and budget — without the overhead of big agencies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -297,10 +296,10 @@ const Pricing = () => {
       <section className="py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+            Don’t Let Bugs Drain Your Budget — Get QA at Friendly Rates.
           </h2>
           <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
-            Get a custom quote tailored to your specific testing needs and project requirements.
+            Talk to our experts today and find a plan that works for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

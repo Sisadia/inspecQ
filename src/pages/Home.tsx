@@ -15,8 +15,8 @@ const Home = () => {
       <Services />
       <ToolsStack />
       <AboutUs />
-      <Portfolio />
-      <WhyChooseUs />
+      {/* <Portfolio /> */}
+      {/* <WhyChooseUs /> */}
       <Team />
       <Contact />
     </div>
